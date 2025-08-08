@@ -54,13 +54,12 @@ class DemClient {
   }
 
   private initializeConfig() {
-    // In a real implementation, these would come from environment variables
-    // For demo purposes, we'll use mock configuration
+    // Using mock configuration for demo purposes
     this.config = {
-      baseUrl: process.env.DEM_BASE_URL || 'https://api.nextmatrix.demo',
-      region: process.env.DEM_REGION || 'us-west-2',
-      accessKey: process.env.DEM_ACCESS_KEY || 'mock-access-key',
-      secretKey: process.env.DEM_SECRET_KEY || 'mock-secret-key',
+      baseUrl: 'https://api.nextmatrix.demo',
+      region: 'us-west-2',
+      accessKey: 'mock-access-key',
+      secretKey: 'mock-secret-key',
     };
   }
 
