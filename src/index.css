@@ -2,41 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Oil Bit Survival & Reliability Design System 
+Industrial analytics with deep blues, warm oranges, professional grays
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Light industrial theme */
+    --background: 220 20% 97%;
+    --foreground: 217 33% 17%;
 
+    /* Cards with subtle depth */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 217 33% 17%;
 
+    /* Popovers */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 217 33% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep industrial blue */
+    --primary: 217 91% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 217 91% 30%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Light blue-gray */
+    --secondary: 215 25% 95%;
+    --secondary-foreground: 217 33% 17%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted elements */
+    --muted: 215 25% 95%;
+    --muted-foreground: 217 13% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm orange for highlights */
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Green for survival/operational */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning - Orange for caution */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
 
-    --radius: 0.5rem;
+    /* Destructive - Red for failures */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Chart colors for survival curves */
+    --chart-primary: 217 91% 35%;
+    --chart-secondary: 24 95% 53%;
+    --chart-tertiary: 142 76% 36%;
+    --chart-quaternary: 271 81% 56%;
+    --chart-grid: 215 25% 90%;
+
+    /* Borders and inputs */
+    --border: 215 25% 88%;
+    --input: 215 25% 92%;
+    --ring: 217 91% 35%;
+
+    /* Enhanced shadows for depth */
+    --shadow-sm: 0 2px 4px -1px hsl(217 33% 17% / 0.1);
+    --shadow-md: 0 4px 12px -2px hsl(217 33% 17% / 0.15);
+    --shadow-lg: 0 8px 25px -3px hsl(217 33% 17% / 0.2);
+
+    /* Gradients for premium feel */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(217 91% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(215 25% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(24 95% 60%));
+
+    /* Border radius for industrial design */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +93,78 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark industrial theme */
+    --background: 217 33% 8%;
+    --foreground: 215 25% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Dark cards with depth */
+    --card: 217 33% 12%;
+    --card-foreground: 215 25% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* Dark popovers */
+    --popover: 217 33% 12%;
+    --popover-foreground: 215 25% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary - Bright blue for dark theme */
+    --primary: 217 91% 60%;
+    --primary-foreground: 217 33% 8%;
+    --primary-hover: 217 91% 55%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Dark blue-gray */
+    --secondary: 217 33% 15%;
+    --secondary-foreground: 215 25% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Muted elements */
+    --muted: 217 33% 15%;
+    --muted-foreground: 217 13% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent - Warm orange maintained */
+    --accent: 24 95% 53%;
+    --accent-foreground: 217 33% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Bright green for dark */
+    --success: 142 76% 45%;
+    --success-foreground: 217 33% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Warning - Orange maintained */
+    --warning: 38 92% 50%;
+    --warning-foreground: 217 33% 8%;
+
+    /* Destructive - Bright red for dark */
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 217 33% 8%;
+
+    /* Chart colors for dark theme */
+    --chart-primary: 217 91% 60%;
+    --chart-secondary: 24 95% 53%;
+    --chart-tertiary: 142 76% 45%;
+    --chart-quaternary: 271 81% 65%;
+    --chart-grid: 217 33% 20%;
+
+    /* Dark borders and inputs */
+    --border: 217 33% 20%;
+    --input: 217 33% 18%;
+    --ring: 217 91% 60%;
+
+    /* Dark theme shadows */
+    --shadow-sm: 0 2px 4px -1px hsl(217 33% 8% / 0.3);
+    --shadow-md: 0 4px 12px -2px hsl(217 33% 8% / 0.4);
+    --shadow-lg: 0 8px 25px -3px hsl(217 33% 8% / 0.5);
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(217 91% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(217 33% 12% / 0.8), hsl(217 33% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(24 95% 60%));
+
+    /* Sidebar dark theme */
+    --sidebar-background: 217 33% 10%;
+    --sidebar-foreground: 215 25% 95%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 217 33% 8%;
+    --sidebar-accent: 217 33% 15%;
+    --sidebar-accent-foreground: 215 25% 95%;
+    --sidebar-border: 217 33% 20%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -101,5 +175,75 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Professional table styling */
+  .data-table th {
+    @apply text-muted-foreground font-medium text-sm;
+  }
+
+  .data-table td {
+    @apply font-mono text-sm;
+  }
+}
+
+@layer components {
+  /* Industrial card variants */
+  .card-industrial {
+    @apply bg-card border shadow-md rounded-xl p-6;
+    background: var(--gradient-card);
+  }
+
+  .card-metric {
+    @apply bg-card border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  /* Chart container styling */
+  .chart-container {
+    @apply w-full h-80 p-4;
+  }
+
+  .chart-container-lg {
+    @apply w-full h-96 p-6;
+  }
+
+  /* Status indicators */
+  .status-operational {
+    @apply bg-success/10 text-success border-success/20;
+  }
+
+  .status-warning {
+    @apply bg-warning/10 text-warning border-warning/20;
+  }
+
+  .status-failed {
+    @apply bg-destructive/10 text-destructive border-destructive/20;
+  }
+
+  /* Professional typography */
+  .text-industrial {
+    @apply text-foreground font-medium;
+  }
+
+  .text-metric {
+    @apply text-2xl font-bold text-foreground;
+  }
+
+  .text-metric-sm {
+    @apply text-lg font-semibold text-foreground;
+  }
+
+  .text-label {
+    @apply text-sm font-medium text-muted-foreground uppercase tracking-wide;
+  }
+
+  /* Loading skeletons */
+  .skeleton-metric {
+    @apply h-8 w-24 bg-muted animate-pulse rounded;
+  }
+
+  .skeleton-chart {
+    @apply h-80 w-full bg-muted animate-pulse rounded-lg;
   }
 }
